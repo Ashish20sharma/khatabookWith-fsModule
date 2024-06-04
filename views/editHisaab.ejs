@@ -1,0 +1,13 @@
+<%- include ('partials/header') %>
+<div class=" mt-4 px-20 flex flex-col gap-y-4 flex-wrap">
+    <h1 class="text-bold"><strong>You are editing hisaab of date</strong></h1>
+    <form action="/edit/<%=id%>" method="post" >
+        <div>
+            <textarea class="rounded border-2 bg-stone-100 p-1" name="edithisaab" id="" rows="10" cols="50"
+                placeholder="Daal, Aata, Cheeni.."></textarea>
+        </div>
+        <input class="bg-blue-500 text-white p-2 rounded cursor-pointer" type="submit" name="" id=""
+            value="Update Hisaab">
+    </form>
+</div>
+<%- include ('partials/footer') %>

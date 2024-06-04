@@ -1,3 +1,11 @@
 <%- include ('partials/header') %>
-show
+<div class=" mt-4 px-20 flex flex-col gap-y-4 flex-wrap">
+    <h1><strong>Hisasb of <span class="text-blue-500"><%= id%></span> date</strong></h1>
+    <div class="pb-5">
+        <h1 class="  p-1" ><%=content%></h1>
+    </div>
+    <div class="pb-5">
+       <a href="/edit/<%=id%>"><button class="text-neutral-500" >Edit Hisaab</button></a> 
+    </div>
+</div>
 <%- include ('partials/footer') %>

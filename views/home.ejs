@@ -2,30 +2,18 @@
     <div class=" mt-4 px-20 flex flex-col gap-y-4 flex-wrap">
         <h1 class="text-bold"><strong>All Hisaab Kitaab</strong></h1>
         <div class="  text-white flex flex-col gap-3 ">
+            <% files.forEach(function(files){%>
             <div class="bg-blue-500 w-fit p-1 flex item-center   rounded gap-40">
                 <div class="flex item-center gap-5">
-                    <h4>12-8-2024</h4>
-                    <i
-                        class="cursor-pointer ri-arrow-right-line bg-white rounded-full w-6 text-center text-blue-500"></i>
+                    <h4><%=files%></h4>
+                   <a href="hisaab/<%=files%>" class="cursor-pointer bg-white rounded-full w-6 text-center text-blue-500"><i class=" ri-arrow-right-line "></i></a> 
                 </div>
                 <div>
-                    <i class=" cursor-pointer ri-pencil-line"></i>
-                    <i
-                        class=" cursor-pointer ri-delete-bin-line bg-white rounded-full p-1 text-center text-red-500 ml-2"></i>
+                    <a href="hisaab/<%=files%>"><i class=" cursor-pointer ri-pencil-line" ></i></a>
+                    <a href="./delete/<%=files%>" class="cursor-pointer "><i class=" ri-delete-bin-line bg-white rounded-full p-1 text-center text-red-500 ml-2"></i></a>
                 </div>
             </div>
-            <div class="bg-blue-500 text-white w-fit p-1 flex item-center   rounded gap-40">
-                <div class="flex item-center gap-5">
-                    <h4>12-8-2024</h4>
-                    <i
-                        class="cursor-pointer ri-arrow-right-line bg-white rounded-full w-6 text-center text-blue-500"></i>
-                </div>
-                <div>
-                    <i class=" cursor-pointer ri-pencil-line"></i>
-                    <i
-                        class=" cursor-pointer ri-delete-bin-line bg-white rounded-full p-1 text-center text-red-500 ml-2"></i>
-                </div>
-            </div>
+            <% })%>
         </div>
     </div>
     <%- include ('partials/footer') %>
